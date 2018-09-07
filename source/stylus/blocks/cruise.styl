@@ -1,0 +1,96 @@
+.cruise
+  background-color #ffffff
+  position relative
+
+  &::after {
+    text-align center
+    justify-content center
+  }
+
+  &--popular::after
+    content "Хит продаж"
+    width: 91px;
+    height: 103px;
+    background-image url("../img/blue-flag.svg")
+    background-repeat no-repeat
+    background-size cover
+    font-family "Raleway Regular", Arial, sans-serif
+    font-size 14px
+    text-transform uppercase
+    color #ffffff
+    display flex
+    align-items center
+    text-align center
+    position absolute
+    top -7px
+    right 16px
+
+  &--promotion::after
+    content "Акция"
+    width: 91px;
+    height: 103px;
+    background-image url("../img/red-flag.svg")
+    background-repeat no-repeat
+    background-size cover
+    font-family "Raleway Regular", Arial, sans-serif
+    font-size 14px
+    text-transform uppercase
+    color #ffffff
+    display flex
+    align-items center
+    position absolute
+    top -7px
+    right 16px
+
+  &--discount::after
+    content "Скидка 10%"
+    width: 91px;
+    height: 103px;
+    background-image url("../img/red-flag.svg")
+    background-repeat no-repeat
+    background-size cover
+    font-family "Raleway Regular", Arial, sans-serif
+    font-size 14px
+    text-transform uppercase
+    color #ffffff
+    display flex
+    align-items center
+    position absolute
+    top -7px
+    right 16px
+
+.cruise__wrapper
+  padding: 25px 24px 45px;
+  display flex
+  flex-direction column
+
+.cruise__header
+  font-size 18px
+  color #00a2dd
+
+.cruise__route
+  font-family "Raleway Regular", Arial, sans-serif
+  font-size 14px
+  font-weight 600
+
+  & span
+    font-family "Raleway Bold", Arial, sans-serif
+
+.cruise__time
+  font-family "Raleway Regular", Arial, sans-serif
+  font-size 14px
+  font-weight 600
+
+  & span
+    font-family "Raleway Bold", Arial, sans-serif
+
+.cruise__price
+  padding 0
+  margin 0
+  font-size 30px
+  color #0d3351
+
+.cruise__old-price
+  font-size 14px
+  text-decoration: line-through;
+  opacity 0.55

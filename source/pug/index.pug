@@ -1,0 +1,116 @@
+doctype html
+
+html(lang = "ru")
+    head
+        meta(charset = "utf-8")
+        meta(name = "viewport", content = "width=device-width,initial-scale=1")
+        meta(name = "description", content = "Морские прогулки")
+
+        title Морские прогулки по Черному морю
+
+        link(type = "text/css", rel = "stylesheet", href = "css/normalize.css")
+        link(type = "text/css", rel = "stylesheet", href = "css/styles.min.css")
+
+    body
+        header(class = "main-header")
+            div(class = "main-header__wrapper")
+                nav(class = "main-header__navigation navigation")
+                    button(class = "navigation__burger")
+                    ul(class = "navigation__list")
+                        li(class = "navigation__item")
+                            a(class = "navigation__link", href = "#")
+                                p Популярные маршруты
+                        li(class = "navigation__item")
+                            a(class = "navigation__link", href = "#")
+                                p Расписание рейсов
+                        li(class = "navigation__item")
+                            a(class = "navigation__link", href = "#")
+                                p Забронированные рейсы
+                        li(class = "navigation__item")
+                            a(class = "navigation__link", href = "#")
+                                p Вход для партнеров
+                        li(class = "navigation__item")
+                            a(class = "navigation__link", href = "#")
+                                p О компании
+                        li(class = "navigation__item")
+                            a(class = "navigation__link", href = "#")
+                                p Контакты
+                section(class = "main-header__user-block user-block")
+                    ul(class = "user-block__list")
+                        li(class = "user-block__item user-block__item--cabinet")
+                            p Личный кабинет
+                        li(class = "user-block__item user-block__item--currency")
+                            p Рубль
+                        li(class = "user-block__item user-block__item--language")
+                            p Ru
+                        li(class = "user-block__item user-block__item--support")
+                            a(href = "#", class = "user-block__phone") 8 800 500-61-05
+                            p(class = "user-block__support") Круглосуточная поддержка
+                section(class = "main-header__promo promo")
+                    img(class = "promo__logo", src = "img/logo.png", width = "70", height = "70")
+                    h1(class = "promo__header-top") Морские прогулки
+                    h2(class = "promo__header-bottom") по Черному морю
+                    button(class = "promo__choose-cruise button") Выбрать круиз
+
+        main(class = "main-content")
+            h2(class = "main-content__header") Каталог круизов
+            p(class = "main-content__filter") Сортировать круизы по #[span цене]
+            ul(class = "main-content__list")
+                li(class = "cruise-list__item cruise cruise--popular")
+                    picture
+                        img(class = "cruise__image", src = "img/anapa-mobile.png")
+                    div(class = "cruise__wrapper")
+                        h3(class = "cruise__header") Морской круиз #[br] в Анапу
+                        p(class = "cruise__route") #[span Маршрут:] Сочи-Лазаревское-Геленджик-Анапа
+                        p(class = "cruise__time") #[span Продолжительность:] 10 ч. 0 мин.
+                        p(class = "cruise__price") 49 000 руб.
+                li(class = "cruise-list__item cruise cruise--promotion")
+                    picture
+                        img(class = "cruise__image", src = "img/sochi-mobile.png")
+                    div(class = "cruise__wrapper")
+                        h3(class = "cruise__header") Обзорная морская прогулка с экскурсией
+                        p(class = "cruise__route") #[span Маршрут:] Сочи-Адлер-Сочи #[br] (без высадки)
+                        p(class = "cruise__time") #[span Продолжительность:] 1 ч. 0 мин.
+                        p(class = "cruise__price") 5 000 руб. #[span(class = "cruise__old-price") 15000 руб.]
+                li(class = "cruise-list__item cruise cruise--discount")
+                    picture
+                        img(class = "cruise__image", src = "img/gelendjik-mobile.png")
+                    div(class = "cruise__wrapper")
+                        h3(class = "cruise__header") Морская прогулка #[br] в Геленджик
+                        p(class = "cruise__route") #[span Маршрут:] Сочи-Туапсе-Геленджик
+                        p(class = "cruise__time") #[span Продолжительность:] 12 ч. 30 мин.
+                        p(class = "cruise__price") 7 000 руб. #[span(class = "cruise__old-price") 10000 руб.]
+                li(class = "cruise-list__item cruise")
+                    picture
+                        img(class = "cruise__image", src = "img/novorossiysk-mobile.png")
+                    div(class = "cruise__wrapper")
+                        h3(class = "cruise__header") Морской круиз #[br] в Новороссийск
+                        p(class = "cruise__route") #[span Маршрут:] Сочи-Геленджик-Новороссйиск-Геленджик-Сочи
+                        p(class = "cruise__time") #[span Продолжительность:] 13 ч. 00 мин.
+                        p(class = "cruise__price") 14 800 руб.
+            button(class = "main-content__button button") Больше круизов
+
+        footer(class = "main-footer")
+            nav(class = "main-footer__navigation navigation-footer")
+                ul(class = "navigation-footer__list")
+                    li(class = "navigation-footer__item")
+                        a(href = "#") Вход для партнеров
+                    li(class = "navigation-footer__item")
+                        a(href = "#") О компании
+                    li(class = "navigation-footer__item")
+                        a(href = "#") Контакты
+            section(class = "main-footer__social social")
+                p(class = "social__head") Будь на связи:
+                ul(class = "social__list")
+                    li(class = "social__item")
+                        a(href = "#", class = "social__link", aria-label = "Мы ВКонтакте")
+                    li(class = "social__item")
+                        a(href = "#", class = "social__link", aria-label = "Мы в Одноклассниках")
+                    li(class = "social__item")
+                        a(href = "#", class = "social__link", aria-label = "Мы в YouTube")
+                    li(class = "social__item")
+                        a(href = "#", class = "social__link", aria-label = "Мы в Instagram")
+            section(class = "main-footer__support support")
+                a(href = "#", class = "support__phone") 8 800 500-61-05
+                p(class = "support__support") Круглосуточная поддержка
+                p(class = "support__copyright") © 2016 OOO «Городские Круизы»
