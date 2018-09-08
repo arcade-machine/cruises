@@ -1,2 +1,28 @@
 .navigation-footer
   display none
+
+@media (min-width: $tablet)
+  .navigation-footer
+    display block
+
+  .navigation-footer__item
+    margin-bottom 5px
+
+    &:last-child
+      margin 0
+
+  .navigation-footer__link
+    padding 0
+    margin 0
+    font-family "Raleway Regular", Arial, sans-serif
+    font-size 14px
+    font-weight 600
+    color #0d3351
+    text-decoration none
+
+    &:visited
+      color #0d3351
+
+@media (min-width: $desktop)
+  .navigation-footer
+    margin-right 12.5%

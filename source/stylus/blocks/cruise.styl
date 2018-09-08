@@ -1,6 +1,12 @@
 .cruise
+  display flex
+  flex-direction column
   background-color #ffffff
   position relative
+  cursor pointer
+
+  &--abrau
+    display none
 
   &::after {
     text-align center
@@ -60,7 +66,9 @@
     right 16px
 
 .cruise__wrapper
+  height 100%
   padding: 25px 24px 45px;
+  justify-content space-between
   display flex
   flex-direction column
 
@@ -78,7 +86,7 @@
 
 .cruise__time
   font-family "Raleway Regular", Arial, sans-serif
-  font-size 14px
+  font-size 13px
   font-weight 600
 
   & span
@@ -94,3 +102,28 @@
   font-size 14px
   text-decoration: line-through;
   opacity 0.55
+
+@media (min-width: $desktop)
+  .cruise--abrau
+    display block
+
+  .cruise--anapa
+    grid-row-start 1
+    grid-row-end span 2
+
+  .cruise__header
+    padding 0
+    margin 0
+
+  .cruise__route
+    padding 0
+    margin 0
+
+  .cruise__time
+    padding 0
+    margin 0
+
+  .cruise__wrapper
+    max-height 189px
+    box-sizing border-box
+

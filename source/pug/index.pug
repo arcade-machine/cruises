@@ -14,7 +14,7 @@ html(lang = "ru")
     body
         header(class = "main-header")
             div(class = "main-header__wrapper")
-                nav(class = "main-header__navigation navigation")
+                nav(class = "main-header__navigation navigation navigation--open")
                     button(class = "navigation__burger")
                     ul(class = "navigation__list")
                         li(class = "navigation__item")
@@ -56,37 +56,53 @@ html(lang = "ru")
             h2(class = "main-content__header") Каталог круизов
             p(class = "main-content__filter") Сортировать круизы по #[span цене]
             ul(class = "main-content__list")
-                li(class = "cruise-list__item cruise cruise--popular")
+                li(class = "cruise-list__item cruise cruise--anapa cruise--popular")
                     picture
+                        source(media = "(min-width: 1170px)", srcset = "img/anapa-desktop.png")
+                        source(media = "(min-width: 750px)", srcset = "img/anapa-tablet.png")
                         img(class = "cruise__image", src = "img/anapa-mobile.png")
                     div(class = "cruise__wrapper")
-                        h3(class = "cruise__header") Морской круиз #[br] в Анапу
+                        h3(class = "cruise__header") Морской круиз в Анапу
                         p(class = "cruise__route") #[span Маршрут:] Сочи-Лазаревское-Геленджик-Анапа
                         p(class = "cruise__time") #[span Продолжительность:] 10 ч. 0 мин.
                         p(class = "cruise__price") 49 000 руб.
                 li(class = "cruise-list__item cruise cruise--promotion")
                     picture
+                        source(media = "(min-width: 1170px)", srcset = "img/sochi-desktop.png")
+                        source(media = "(min-width: 750px)", srcset = "img/sochi-tablet.png")
                         img(class = "cruise__image", src = "img/sochi-mobile.png")
                     div(class = "cruise__wrapper")
                         h3(class = "cruise__header") Обзорная морская прогулка с экскурсией
-                        p(class = "cruise__route") #[span Маршрут:] Сочи-Адлер-Сочи #[br] (без высадки)
+                        p(class = "cruise__route") #[span Маршрут:] Сочи-Адлер-Сочи (без высадки)
                         p(class = "cruise__time") #[span Продолжительность:] 1 ч. 0 мин.
                         p(class = "cruise__price") 5 000 руб. #[span(class = "cruise__old-price") 15000 руб.]
                 li(class = "cruise-list__item cruise cruise--discount")
                     picture
+                        source(media = "(min-width: 1170px)", srcset = "img/gelendjik-desktop.png")
+                        source(media = "(min-width: 750px)", srcset = "img/gelendjik-tablet.png")
                         img(class = "cruise__image", src = "img/gelendjik-mobile.png")
                     div(class = "cruise__wrapper")
-                        h3(class = "cruise__header") Морская прогулка #[br] в Геленджик
+                        h3(class = "cruise__header") Морская прогулка в Геленджик
                         p(class = "cruise__route") #[span Маршрут:] Сочи-Туапсе-Геленджик
                         p(class = "cruise__time") #[span Продолжительность:] 12 ч. 30 мин.
                         p(class = "cruise__price") 7 000 руб. #[span(class = "cruise__old-price") 10000 руб.]
                 li(class = "cruise-list__item cruise")
                     picture
+                        source(media = "(min-width: 1170px)", srcset = "img/novorossiysk-desktop.png")
+                        source(media = "(min-width: 750px)", srcset = "img/novorossiysk-tablet.png")
                         img(class = "cruise__image", src = "img/novorossiysk-mobile.png")
                     div(class = "cruise__wrapper")
-                        h3(class = "cruise__header") Морской круиз #[br] в Новороссийск
+                        h3(class = "cruise__header") Морской круиз в Новороссийск
                         p(class = "cruise__route") #[span Маршрут:] Сочи-Геленджик-Новороссйиск-Геленджик-Сочи
                         p(class = "cruise__time") #[span Продолжительность:] 13 ч. 00 мин.
+                        p(class = "cruise__price") 14 800 руб.
+                li(class = "cruise-list__item cruise cruise--abrau")
+                    picture
+                        img(class = "cruise__image", src = "img/abrau-desktop.png")
+                    div(class = "cruise__wrapper")
+                        h3(class = "cruise__header") Морская прогулка в Абрау-Дюрсо
+                        p(class = "cruise__route") #[span Маршрут:] Сочи-Абрау-Дюрсо
+                        p(class = "cruise__time") #[span Продолжительность:] 11 ч. 00 мин.
                         p(class = "cruise__price") 14 800 руб.
             button(class = "main-content__button button") Больше круизов
 
@@ -94,23 +110,49 @@ html(lang = "ru")
             nav(class = "main-footer__navigation navigation-footer")
                 ul(class = "navigation-footer__list")
                     li(class = "navigation-footer__item")
-                        a(href = "#") Вход для партнеров
+                        a(class = "navigation-footer__link", href = "#") Вход для партнеров
                     li(class = "navigation-footer__item")
-                        a(href = "#") О компании
+                        a(class = "navigation-footer__link", href = "#") О компании
                     li(class = "navigation-footer__item")
-                        a(href = "#") Контакты
+                        a(class = "navigation-footer__link", href = "#") Контакты
             section(class = "main-footer__social social")
                 p(class = "social__head") Будь на связи:
                 ul(class = "social__list")
                     li(class = "social__item")
-                        a(href = "#", class = "social__link", aria-label = "Мы ВКонтакте")
+                        a(href = "#", class = "social__link social__link--vk", aria-label = "Мы ВКонтакте")
                     li(class = "social__item")
-                        a(href = "#", class = "social__link", aria-label = "Мы в Одноклассниках")
+                        a(href = "#", class = "social__link social__link--ok", aria-label = "Мы в Одноклассниках")
                     li(class = "social__item")
-                        a(href = "#", class = "social__link", aria-label = "Мы в YouTube")
+                        a(href = "#", class = "social__link social__link--yt", aria-label = "Мы в YouTube")
                     li(class = "social__item")
-                        a(href = "#", class = "social__link", aria-label = "Мы в Instagram")
+                        a(href = "#", class = "social__link social__link--inst", aria-label = "Мы в Instagram")
             section(class = "main-footer__support support")
                 a(href = "#", class = "support__phone") 8 800 500-61-05
                 p(class = "support__support") Круглосуточная поддержка
                 p(class = "support__copyright") © 2016 OOO «Городские Круизы»
+
+        section(class = "pop-up")
+            ul(class = "pop-up__list")
+                li(class = "pop-up__item pop-up__item--abrau")
+                    button(class = "pop-up__close")
+                    div(class = "pop-up__slider")
+                        div(class = "pop-up__images")
+                            img(class = "pop-up__image", src = "img/anapa/anapa-1.png", width = "360", height = "240")
+                            img(class = "pop-up__image", src = "img/anapa/anapa-2.png", width = "360", height = "240")
+                            img(class = "pop-up__image", src = "img/anapa/anapa-3.png", width = "360", height = "240")
+                            img(class = "pop-up__image", src = "img/anapa/anapa-4.png", width = "360", height = "240")
+                        div(class = "pop-up__slider-image")
+                            img(class = "pop-up__slider-small-image", src = "img/anapa/anapa-1.png", onclick="currentDiv(1)")
+                            img(class = "pop-up__slider-small-image", src = "img/anapa/anapa-2.png", onclick="currentDiv(2)")
+                            img(class = "pop-up__slider-small-image", src = "img/anapa/anapa-3.png", onclick="currentDiv(3)")
+                            img(class = "pop-up__slider-small-image", src = "img/anapa/anapa-4.png", onclick="currentDiv(4)")
+                    div(class = "pop-up__content")
+                        h3(class = "pop-up__header") Морская прогулка в Абрау-Дюрсо
+                        p(class = "pop-up__route") #[span Маршрут:] Сочи-Абрау-Дюрсо
+                        p(class = "pop-up__time") #[span Продолжительность:] 11 ч. 00 мин.
+                        p(class = "pop-up__schedule") #[span Расписание:] #[br] Отправление из Сочи: ежедневно в 10:00, 11:40, 13:20, 15:00, 16:40 #[br] Отправление из Абрау-Дюрсо: ежедневно в 12:25, 14:05, 15:45, 17:25, 19:05 #[br] Продолжительность: 11 часов 0 мин., из которых 10 часов - морская прогулка (туда и обратно), от 1 часа 30 мин. - свободное время в Ласточкином гнезде #[br] Причал отправления/прибытия: набережная Ленина, причал №8, теплоход "Азов"
+                        p(class = "pop-up__price") 14 800 руб.
+                        button(class = "pop-up__button button") Бронировать
+
+
+        script(src = "js/script.js")

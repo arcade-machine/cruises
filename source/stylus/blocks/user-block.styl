@@ -1,3 +1,101 @@
-.user-block {
+.user-block
   display none
-}
+
+@media (min-width: $tablet)
+  .user-block
+    margin-left auto
+    display block
+
+  .user-block__list
+    display flex
+    align-items center
+
+  .user-block__item
+    padding-left 20px
+    padding-right 15px
+    margin-right 20px
+    position relative
+
+    &:last-child
+      padding 0
+      margin-right 0
+
+    &--language
+      padding-left 0
+
+    &--cabinet p
+      padding 0
+      margin 0
+      font-family "Raleway Regular", Arial, sans-serif
+      font-size 14px
+      font-weight 600
+      color #0d3351
+
+    &--currency p
+      padding 0
+      margin 0
+      font-family "Raleway Regular", Arial, sans-serif
+      font-size 14px
+      font-weight 600
+      color #0d3351
+
+    &--language p
+      padding 0
+      margin 0
+      font-family "Raleway Regular", Arial, sans-serif
+      font-size 14px
+      font-weight 600
+      color #0d3351
+
+  .user-block__item
+    &::after
+      content ""
+      width 8px
+      height 5px
+      background-image url("../img/icons/icon-triangle.svg")
+      background-size cover
+      position absolute
+      right 0
+      top 6px
+
+    &--cabinet::before
+      content ""
+      width 10px
+      height 12px
+      background-image url("../img/icons/icon-user.svg")
+      background-size cover
+      position absolute
+      left 0
+      top 2px
+
+    &--currency::before
+      content ""
+      width 10px
+      height 11px
+      background-image url("../img/icons/icon-ruble.svg")
+      background-size cover
+      position absolute
+      left 0
+      top 2px
+
+    &:last-child::after
+      display none
+
+
+  .user-block__phone
+    padding 0
+    margin 0
+    font-family "Raleway Bold", Arial, sans-serif
+    text-decoration none
+    color #0d3351
+
+    &:visited
+      color #0d3351
+
+  .user-block__support
+    padding 0
+    margin 0
+    font-family "Raleway Regular", Arial, sans-serif
+    font-size 10px
+    font-weight 600
+    color #0d3351

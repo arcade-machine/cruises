@@ -8,6 +8,8 @@
   box-sizing border-box
 
 .main-header__wrapper
+  max-width 290px
+  margin 0 auto
   margin-bottom 200px
   position relative
 
@@ -22,3 +24,24 @@
     bottom: -270px;
     left 50%
     transform translateX(-22px)
+
+@media (min-width: $tablet)
+  .main-header
+    background-image url("../img/header-bg-tablet.png")
+
+  .main-header__wrapper
+    max-width 720px
+    display flex
+    flex-wrap wrap
+    align-items center
+
+@media (min-width: $desktop)
+  .main-header
+    height 100vh
+    background-image url("../img/header-bg-dekstop.png")
+
+  .main-header__wrapper
+    max-width 1140px
+
+    &::before
+      display none

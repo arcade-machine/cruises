@@ -26,3 +26,57 @@
   width 100%
   height 100%
   display block
+  position relative
+
+  &--vk::after
+    content ""
+    width 18px
+    height 11px
+    position absolute
+    top: 35%
+    left: 23%
+    background-image url("../img/icons/icon-vk.svg")
+    background-repeat no-repeat
+
+  &--ok::after
+    content ""
+    width 10px
+    height 16px
+    position absolute
+    top: 25%
+    left: 35%
+    background-image url("../img/icons/icon-ok.svg")
+    background-repeat no-repeat
+
+  &--yt::after
+    content ""
+    width 14px
+    height 18px
+    position absolute
+    top: 22%;
+    left: 28%;
+    background-image url("../img/icons/icon-yt.svg")
+    background-repeat no-repeat
+
+  &--inst::after
+    content ""
+    width 14px
+    height 14px
+    position absolute
+    top: 30%;
+    left: 29%;
+    background-image url("../img/icons/icon-insta.svg")
+    background-repeat no-repeat
+
+@media (min-width: $tablet)
+  .social
+    min-height 57px
+    margin-bottom 0
+    display flex
+    flex-direction column
+    justify-content space-between
+
+  .social__head
+    padding 0
+    margin 0
+    text-align left
